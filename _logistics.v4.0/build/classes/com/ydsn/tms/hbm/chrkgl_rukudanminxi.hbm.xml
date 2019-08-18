@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="chrkgl_rukudanminxi" table="rukudanminxi">
+		<id name="rkmx_bill" column="rkmx_bill"></id>
+		<property name="rkhw_num" column="rkhw_num"></property>
+		<property name="rkd_id" column="rkd_id"></property>
+		<property name="rkhw" column="rkhw"></property>
+		<property name="shp_id" column="shp_id"></property>
+		<property name="rkmx_amount" column="rkmx_amount"></property>
+		<property name="rkyxq" column="rkyxq"></property>
+		<property name="rkshch_date" column="rkshch_date"></property>
+	</class>
+</hibernate-mapping>

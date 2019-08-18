@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="storeroom" namespace="/jcxx" extends="struts-default">
+       <action name="add" class="addStoAct" method="add">
+          <result></result>
+       </action>
+       <action name="update" class="updateStoAct" method="update">
+          <result  type="redirectAction">show</result>
+       </action>
+       <action name="delete" class="deleteStoAct" method="delete">
+          <result  type="redirectAction">show</result>
+       </action>
+       <action name="show" class="showStoAct" method="show">
+          <result name="success"></result>
+       </action>
+       <action name="showName" class="showNameAct" method="showName">
+          <result></result>
+       </action>
+    </package>
+</struts>

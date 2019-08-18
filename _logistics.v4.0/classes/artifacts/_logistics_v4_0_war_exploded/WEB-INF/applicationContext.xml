@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+<bean id="myDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+	<property name="jndiName" value="java:comp/env/jdbc/myds"/>
+</bean>
+<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.Oracle10gDialect</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/ydsn/tms/hbm/jcxx_Storeroom.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/jcxx_Customer.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/jcxx_Comfile.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/jcxx_ReceiveFile.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/jcxx_CargoSpace.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/xtgl_Authoritygroup.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/xtgl_UserInfo.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/ddgl_enterwarehouseOrder.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/ddgl_outofwarehouseOrder.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/nbchrkgl_huowuyiku.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/nbchrkgl_huowuyiwei.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/chrkgl_chhd.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/chrkgl_chukudanminxi.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/chrkgl_rukudan.hbm.xml</value>
+				<value>com/ydsn/tms/hbm/chrkgl_rukudanminxi.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 事务管理器 -->
+	<bean id="htm" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 事务通知 -->
+	<tx:advice id="txm" transaction-manager="htm">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+		</tx:attributes>
+	</tx:advice>
+	
+    <!-- 配置事务切点 -->
+    <aop:config>
+    	<aop:advisor advice-ref="txm" pointcut="execution(* com.ydsn.tms.service.*.*(..))"/>
+    </aop:config>
+<bean id="baseDAO" class="com.ydsn.tms.dao.BaseDAO" abstract="true">
+	<property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+</beans>

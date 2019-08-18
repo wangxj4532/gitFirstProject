@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="rukudan" namespace="/chrkgl" extends="struts-default">
+       <action name="showRKD" class="showRKDAct" method="showRKD">
+          <result></result>
+       </action>
+       <action name="addRKD" class="addRKDAct" method="addRKD">
+          <result  type="redirectAction">showRKD</result>
+       </action>
+       <action name="updateRKD" class="updateRKDAct" method="updateRKD">
+          <result  type="redirectAction">showRKD</result>
+       </action>
+    
+    </package>
+</struts>

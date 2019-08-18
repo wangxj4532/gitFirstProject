@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="jcxx_CargoSpace" table="cargoSpace">
+		<id name="car_id" column="car_id"></id>
+		<property name="sto_id" column="sto_id"></property>
+		<property name="car_bill" column="car_bill"></property>
+		<property name="car_desc" column="car_desc"></property>
+		<property name="car_remark" column="car_remark"></property>
+	</class>
+</hibernate-mapping>

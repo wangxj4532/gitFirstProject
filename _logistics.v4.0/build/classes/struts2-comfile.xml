@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="Comfile" namespace="/jcxx" extends="struts-default">
+       <action name="showCom" class="showComAct" method="showCom">
+          <result></result>
+       </action>
+       <action name="showInCom" class="showComAct" method="showInCom">
+          <result></result>
+       </action>
+       <action name="addCom" class="addComAct" method="addCom">
+          <result  type="redirectAction">showCom</result>
+       </action>
+       <action name="deleteCom" class="deleteComAct" method="deleteCom">
+          <result  type="redirectAction">showCom</result>
+       </action>
+       <action name="updateCom" class="updateComAct" method="updateCom">
+          <result  type="redirectAction">showCom</result>
+       </action>
+    
+    
+    </package>
+</struts>

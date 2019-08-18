@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="ddgl_enterwarehouseOrder" table="enterwarehouseOrder">
+		<id name="rkdd_bill" column="rkdd_bill"></id>
+		<property name="rkddshp_id" column="rkddshp_id"></property>
+		<property name="rkddkh_id" column="rkddkh_id"></property>
+		<property name="khdd_bill" column="khdd_bill"></property>
+		<property name="rk_amount" column="rk_amount"></property>
+		<property name="rkorfprk" column="rkorfprk"></property>
+		<property name="rkdd_status" column="rkdd_status"></property>
+		<property name="xd_date" column="xd_date"></property>
+		<property name="yjrk_date" column="yjrk_date"></property>
+		<property name="rkddzhd_man" column="rkddzhd_man"></property>
+		<property name="rkddzhd_time" column="rkddzhd_time"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="nbchrkgl_huowuyiwei" table="huowuyiwei">
+		<id name="hwyw_bill" column="hwyw_bill"></id>
+		<property name="hwychhw_id" column="hwychhw_id"></property>
+		<property name="hwyrhw_id" column="hwyrhw_id"></property>
+		<property name="hwywshp_id" column="hwywshp_id"></property>
+		<property name="hwywck_id" column="hwywck_id"></property>
+		<property name="hwyw_num" column="hwyw_num"></property>
+		<property name="hwywbzhgg" column="hwywbzhgg"></property>
+		<property name="hwyw_amount" column="hwyw_amount"></property>
+		<property name="hwyw_reason" column="hwyw_reason"></property>
+	</class>
+</hibernate-mapping>

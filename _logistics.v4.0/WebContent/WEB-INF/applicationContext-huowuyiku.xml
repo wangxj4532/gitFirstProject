@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+<bean id="YKDao" class="com.ydsn.tms.dao.imp.nbchrkgl_huowuyikuDAOImp" parent="baseDAO">
+</bean>
+<bean id="StoDao" class="com.ydsn.tms.dao.imp.StoreroomDAOImp" parent="baseDAO">
+</bean>
+<bean id="YKSSer" class="com.ydsn.tms.service.imp.nbchrkgl_huowuyikuServiceImp">
+   <property name="ykdao" ref="YKDao"></property>
+   <property name="stodao" ref="StoDao"></property>
+</bean>
+<bean id="StoSer" class="com.ydsn.tms.service.imp.StoreroomServiceImp">
+   <property name="dao" ref="StoDao"></property>
+</bean>
+
+<bean id="showYKSAct" class="com.ydsn.tms.action.nbchrkgl_huowuyikuAction" scope="prototype">
+   <property name="ykser" ref="YKSSer"></property>
+</bean>
+<bean id="showStoYKSAct" class="com.ydsn.tms.action.nbchrkgl_huowuyikuAction" scope="prototype">
+   <property name="stoser" ref="StoSer"></property>
+</bean>
+<bean id="addYKSAct" class="com.ydsn.tms.action.nbchrkgl_huowuyikuAction" scope="prototype">
+   <property name="ykser" ref="YKSSer"></property>
+</bean>
+<bean id="deleteYKSAct" class="com.ydsn.tms.action.nbchrkgl_huowuyikuAction" scope="prototype">
+   <property name="ykser" ref="YKSSer"></property>
+</bean>
+<bean id="updateYKSAct" class="com.ydsn.tms.action.nbchrkgl_huowuyikuAction" scope="prototype">
+   <property name="ykser" ref="YKSSer"></property>
+</bean>
+
+</beans>

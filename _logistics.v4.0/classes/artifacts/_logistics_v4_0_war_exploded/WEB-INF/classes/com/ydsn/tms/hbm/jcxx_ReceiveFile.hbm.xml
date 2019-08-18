@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="jcxx_ReceiveFile" table="receiveFile">
+		<id name="rec_id" column="rec_id">
+			
+		</id>
+		<property name="rec_bill" column="rec_bill"></property>
+		<property name="rec_name" column="rec_name"></property>
+		<property name="rec_man" column="rec_man"></property>
+		<property name="rec_phone" column="rec_phone"></property>
+		<property name="rec_addr" column="rec_addr"></property>
+		<property name="rec_time" column="rec_time"></property>
+	</class>
+</hibernate-mapping>

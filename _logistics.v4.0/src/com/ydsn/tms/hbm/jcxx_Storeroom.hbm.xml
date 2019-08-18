@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="Storeroom" table="storeroom">
+		<id name="sto_id" column="sto_id" type="int">
+			<!-- 主键生成策略 -->
+			<generator class="sequence">
+			   <param name="sequence">YDSN_STO</param>
+			</generator>
+		</id>
+		<property name="sto_bill" column="sto_bill"></property>
+		<property name="sto_name" column="sto_name"></property>
+		<property name="sto_phone" column="sto_phone"></property>
+		<property name="sto_addr" column="sto_addr"></property>
+		<property name="sto_man" column="sto_man"></property>
+	</class>
+</hibernate-mapping>

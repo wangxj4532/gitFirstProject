@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="cargoSpace" namespace="/jcxx" extends="struts-default">
+       <action name="showCar" class="showCarAct" method="showCar">
+          <result name="success"></result>
+       </action>
+       <action name="showNameById" class="showNameByIdAct" method="showNameById">
+          <result></result>
+       </action>
+       <action name="addCar" class="addCarAct" method="addCar">
+          <result  type="redirectAction">showCar</result>
+       </action>
+       <action name="updateCar" class="updateCarAct" method="updateCar">
+          <result  type="redirectAction">showCar</result>
+       </action>
+    </package>
+</struts>

@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+body {
+	margin: 0px;
+	background: url(../imgs/wuliu.jpg) no-repeat;
+}
+
+#main {
+	margin: 0px;
+	position: absolute;
+	top: 50px;
+	left: 400px;
+	width: 350px;
+	height: 300px;
+	filter: alpha(opacity : 80);
+	opacity: 0.7;
+	background: rgba(0, 118, 160, .25);
+	border-radius: 20px;
+}
+
+#tit{
+    margin-top:10px;
+    font-size: 30px; 
+    padding-left: 100px;
+}
+
+.tb {
+	position: absolute;
+	top: 50px; width : 350px;
+	height: 200px;
+	width: 350px;
+}
+
+.tb td {
+	font-size: 16px;
+}
+
+#rukou {
+	position: absolute;
+	top: 250px;
+	left: 165px;
+}
+
+input {
+	height: 30px;
+	border-radius: 20px;
+}

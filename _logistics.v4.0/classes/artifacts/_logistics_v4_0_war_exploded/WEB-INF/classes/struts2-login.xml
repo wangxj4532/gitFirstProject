@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="login" namespace="/" extends="struts-default">
+       <action name="login" class="loginAct" method="login">
+          <result name="success" type="redirect">main.jsp</result>
+          <result name="error" type="redirect">login.jsp</result>
+       </action>
+       <action name="yzhm" class="com.ydsn.tms.action.LoginAction" method="yzhm">
+          <result></result>
+       </action>
+    </package>
+</struts>

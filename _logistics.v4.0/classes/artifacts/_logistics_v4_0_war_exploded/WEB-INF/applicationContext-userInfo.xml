@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+  <bean id="UserDao" class="com.ydsn.tms.dao.imp.xtgl_UserStoreDAOImp" parent="baseDAO"></bean>
+  <bean id="UserDao1" class="com.ydsn.tms.dao.imp.xtgl_UserInfoDAOImp" parent="baseDAO"></bean>
+  <bean id="UserSer" class="com.ydsn.tms.service.imp.xtgl_UserStoreServiceImp">
+     <property name="userdao" ref="UserDao"></property>
+     <property name="userdao1" ref="UserDao1"></property>
+  </bean>
+  <bean id="showUserAct" class="com.ydsn.tms.action.xtgl_UserStoreAction" scope="prototype">
+     <property name="userser" ref="UserSer"></property>
+  </bean>
+  <bean id="addUserAct" class="com.ydsn.tms.action.xtgl_UserStoreAction" scope="prototype">
+     <property name="userser" ref="UserSer"></property>
+  </bean>
+  <bean id="updateUserAct" class="com.ydsn.tms.action.xtgl_UserStoreAction" scope="prototype">
+     <property name="userser" ref="UserSer"></property>
+  </bean>
+
+
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+  <bean id="CHDDao" class="com.ydsn.tms.dao.imp.chrkgl_chhdDAOImp" parent="baseDAO"></bean>
+  <bean id="CHD_CUSDao" class="com.ydsn.tms.dao.imp.jcxx_CustomerDAOImp" parent="baseDAO"></bean>
+  <bean id="CHD_RECDao" class="com.ydsn.tms.dao.imp.jcxx_ReceiveFileDAOImp" parent="baseDAO"></bean>
+  <bean id="CHD_OUTDao" class="com.ydsn.tms.dao.imp.ddgl_OutofwarehouseOrderDAOImp" parent="baseDAO"></bean>
+  <bean id="CHDSer" class="com.ydsn.tms.service.imp.chrkgl_chhdServiceImp">
+     <property name="chddao" ref="CHDDao"></property>
+     <property name="chd_cusdao" ref="CHD_CUSDao"></property>
+     <property name="chd_recdao" ref="CHD_RECDao"></property>
+     <property name="chd_outdao" ref="CHD_OUTDao"></property>
+  </bean>
+  <bean id="showCHDAct" class="com.ydsn.tms.action.chrkgl_chhdAction" scope="prototype">
+     <property name="chdser" ref="CHDSer"></property>
+  </bean>
+  <bean id="addCHDAct" class="com.ydsn.tms.action.chrkgl_chhdAction" scope="prototype">
+     <property name="chdser" ref="CHDSer"></property>
+  </bean>
+  <bean id="updateCHDAct" class="com.ydsn.tms.action.chrkgl_chhdAction" scope="prototype">
+     <property name="chdser" ref="CHDSer"></property>
+  </bean>
+
+
+
+</beans>

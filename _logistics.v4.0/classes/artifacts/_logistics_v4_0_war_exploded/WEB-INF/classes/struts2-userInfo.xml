@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="userInfo" namespace="/xtgl" extends="struts-default">
+       <action name="addUser" class="addUserAct" method="addUser">
+          <result></result>
+       </action>
+       <action name="updateUser" class="updateUserAct" method="updateUser">
+          <result  type="redirectAction">showUser</result>
+       </action>
+       <action name="showUser" class="showUserAct" method="showUser">
+          <result name="success"></result>
+       </action>
+    </package>
+</struts>

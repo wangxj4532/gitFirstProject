@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="customer" namespace="/jcxx" extends="struts-default">
+       <action name="showCus" class="showCusAct" method="showCus">
+          <result></result>
+       </action>
+       <action name="showComCus" class="showCusAct" method="showComCus">
+          <result></result>
+       </action>
+       <action name="addCus" class="addCusAct" method="addCus">
+          <result  type="redirectAction">showCus</result>
+       </action>
+       <action name="updateCus" class="updateCusAct" method="updateCus">
+          <result  type="redirectAction">showCus</result>
+       </action>
+       <action name="deleteCus" class="deleteCusAct" method="deleteCus">
+          <result  type="redirectAction">showCus</result>
+       </action>
+    </package>
+</struts>

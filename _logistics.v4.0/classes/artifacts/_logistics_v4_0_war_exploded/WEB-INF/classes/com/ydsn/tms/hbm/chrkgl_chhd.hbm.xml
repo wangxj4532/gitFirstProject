@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="chrkgl_chhd" table="chukudan">
+		<id name="chk_id" column="chk_id"></id>
+		<property name="chk_bill" column="chk_bill"></property>
+		<property name="chkkf_id" column="chkkf_id"></property>
+		<property name="chk_date" column="chk_date"></property>
+		<property name="chkkh_id" column="chkkh_id"></property>
+		<property name="shhdw_id" column="shhdw_id"></property>
+		<property name="chk_way" column="chk_way"></property>
+		<property name="sh_way" column="sh_way"></property>
+		<property name="sh_date" column="sh_date"></property>
+		<property name="shh_man" column="shh_man"></property>
+		<property name="shh_tel" column="shh_tel"></property>
+		<property name="chkzhd_man" column="chkzhd_man"></property>
+		<property name="chk_bm" column="chk_bm"></property>
+		<property name="chkorccpxh" column="chkorccpxh"></property>
+	</class>
+</hibernate-mapping>

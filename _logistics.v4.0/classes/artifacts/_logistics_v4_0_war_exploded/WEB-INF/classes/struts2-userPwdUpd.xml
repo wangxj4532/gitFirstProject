@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="userPwdUpd" namespace="/xtgl" extends="struts-default">
+       <action name="vilPwd" class="vilPwdAct" method="vilPwd">
+          <result></result>
+       </action>
+       <action name="submit" class="submitAct" method="submit">
+          <result></result>
+       </action>
+    </package>
+</struts>

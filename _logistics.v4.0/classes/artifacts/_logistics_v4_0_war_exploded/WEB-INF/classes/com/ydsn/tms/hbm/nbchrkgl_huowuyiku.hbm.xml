@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="nbchrkgl_huowuyiku" table="huowuyiku">
+		<id name="hwyk_bill" column="hwyk_bill"></id>
+		<property name="hwychk_bill" column="hwychk_bill"></property>
+		<property name="hwyrk_bill" column="hwyrk_bill"></property>
+		<property name="hwykzhd_man" column="hwykzhd_man"></property>
+		<property name="hwykzhd_time" column="hwykzhd_time"></property>
+		<property name="hwyk_remark" column="hwyk_remark"></property>
+	</class>
+</hibernate-mapping>

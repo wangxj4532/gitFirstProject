@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+  <bean id="RKDDao" class="com.ydsn.tms.dao.imp.chrkgl_rukudanDAOImp" parent="baseDAO"></bean>
+  <bean id="RKD_CUSDao" class="com.ydsn.tms.dao.imp.jcxx_CustomerDAOImp" parent="baseDAO"></bean>
+  <bean id="RKD_STODao" class="com.ydsn.tms.dao.imp.StoreroomDAOImp" parent="baseDAO"></bean>
+  <bean id="RKD_ENTDao" class="com.ydsn.tms.dao.imp.ddgl_enterwarehouseOrderDAOImp" parent="baseDAO"></bean>
+  <bean id="RKDSer" class="com.ydsn.tms.service.imp.chrkgl_rukudanServiceImp">
+     <property name="rkddao" ref="RKDDao"></property>
+     <property name="rkd_cusdao" ref="RKD_CUSDao"></property>
+     <property name="rkd_stodao" ref="RKD_STODao"></property>
+     <property name="rkd_entdao" ref="RKD_ENTDao"></property>
+  </bean>
+  <bean id="showRKDAct" class="com.ydsn.tms.action.chrkgl_rukudanAction" scope="prototype">
+     <property name="rkdser" ref="RKDSer"></property>
+  </bean>
+  <bean id="addRKDAct" class="com.ydsn.tms.action.chrkgl_rukudanAction" scope="prototype">
+     <property name="rkdser" ref="RKDSer"></property>
+  </bean>
+  <bean id="updateRKDAct" class="com.ydsn.tms.action.chrkgl_rukudanAction" scope="prototype">
+     <property name="rkdser" ref="RKDSer"></property>
+  </bean>
+
+
+
+</beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="huowuyiwei" namespace="/nbchrkgl" extends="struts-default">
+       <action name="showYW" class="showYWAct" method="showYW">
+          <result></result>
+       </action>
+       <action name="addYW" class="addYWAct" method="addYW">
+          <result  type="redirectAction">showYW</result>
+       </action>
+       <action name="updateYW" class="updateYWAct" method="updateYW">
+          <result  type="redirectAction">showYW</result>
+       </action>
+       <action name="deleteYW" class="deleteYWAct" method="deleteYW">
+          <result  type="redirectAction">showYW</result>
+       </action>
+    
+    
+    </package>
+</struts>

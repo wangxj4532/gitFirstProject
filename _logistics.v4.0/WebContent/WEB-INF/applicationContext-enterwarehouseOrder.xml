@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+<bean id="InDao" class="com.ydsn.tms.dao.imp.ddgl_InComCusDAOImp" parent="baseDAO">
+</bean>
+<bean id="InDao1" class="com.ydsn.tms.dao.imp.ddgl_enterwarehouseOrderDAOImp" parent="baseDAO">
+</bean>
+<bean id="ComDao2" class="com.ydsn.tms.dao.imp.jcxx_ComFileDAOImp" parent="baseDAO">
+</bean>
+<bean id="Cusdao2" class="com.ydsn.tms.dao.imp.jcxx_CustomerDAOImp" parent="baseDAO">
+</bean>
+<bean id="InSer" class="com.ydsn.tms.service.imp.ddgl_InComCusServiceImp">
+   <property name="indao" ref="InDao"></property>
+   <property name="indao1" ref="InDao1"></property>
+   <property name="comdao2" ref="ComDao2"></property>
+   <property name="cusdao2" ref="Cusdao2"></property>
+</bean>
+<bean id="showInAct" class="com.ydsn.tms.action.ddgl_InComCusAction" scope="prototype">
+   <property name="inser" ref="InSer"></property>
+</bean>
+<bean id="findAllBill2Act" class="com.ydsn.tms.action.ddgl_InComCusAction" scope="prototype">
+   <property name="inser" ref="InSer"></property>
+</bean>
+
+<bean id="CusDao" class="com.ydsn.tms.dao.imp.jcxx_CustomerDAOImp" parent="baseDAO">
+</bean>
+<bean id="CusSer" class="com.ydsn.tms.service.imp.jcxxCustomerServiceImp">
+   <property name="cusdao" ref="CusDao"></property>
+</bean>
+<bean id="showCusAct" class="com.ydsn.tms.action.jcxx_CustomerAction" scope="prototype">
+   <property name="cusser" ref="CusSer"></property>
+</bean>
+<bean id="addInAct" class="com.ydsn.tms.action.ddgl_InComCusAction" scope="prototype">
+   <property name="inser" ref="InSer"></property>
+</bean>
+<bean id="deleteInAct" class="com.ydsn.tms.action.ddgl_InComCusAction" scope="prototype">
+   <property name="inser" ref="InSer"></property>
+</bean>
+<bean id="updateInAct" class="com.ydsn.tms.action.ddgl_InComCusAction" scope="prototype">
+   <property name="inser" ref="InSer"></property>
+</bean>
+
+</beans>

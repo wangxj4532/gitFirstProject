@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+<bean id="ComDao6" class="com.ydsn.tms.dao.imp.ComCusDAOImp" parent="baseDAO">
+</bean>
+<bean id="ComDao1" class="com.ydsn.tms.dao.imp.jcxx_ComFileDAOImp" parent="baseDAO">
+</bean>
+<bean id="Cusdao1" class="com.ydsn.tms.dao.imp.jcxx_CustomerDAOImp" parent="baseDAO">
+</bean>
+<bean id="ComSer" class="com.ydsn.tms.service.imp.jcxxComFileServiceImp">
+   <property name="comdao6" ref="ComDao6"></property>
+   <property name="comdao1" ref="ComDao1"></property>
+   <property name="cusdao1" ref="Cusdao1"></property>
+</bean>
+<bean id="showComAct" class="com.ydsn.tms.action.jcxxComfileAction" scope="prototype">
+   <property name="comser" ref="ComSer"></property>
+</bean>
+<bean id="addComAct" class="com.ydsn.tms.action.jcxxComfileAction" scope="prototype">
+   <property name="comser" ref="ComSer"></property>
+</bean>
+<bean id="deleteComAct" class="com.ydsn.tms.action.jcxxComfileAction" scope="prototype">
+   <property name="comser" ref="ComSer"></property>
+</bean>
+<bean id="updateComAct" class="com.ydsn.tms.action.jcxxComfileAction" scope="prototype">
+   <property name="comser" ref="ComSer"></property>
+</bean>
+
+</beans>

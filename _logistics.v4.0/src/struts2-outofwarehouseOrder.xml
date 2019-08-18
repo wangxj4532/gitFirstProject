@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="outofwarehouseOrder" namespace="/ddgl" extends="struts-default">
+       <action name="showOut" class="showOutAct" method="showOut">
+          <result></result>
+       </action>
+       <action name="findAllBill" class="findAllBillAct" method="findAllBill">
+          <result></result>
+       </action>
+       <action name="showComCus" class="showCusAct" method="showComCus">
+          <result></result>
+       </action>
+       <action name="showInCom" class="showComAct" method="showInCom">
+          <result></result>
+       </action>
+       <action name="addOut" class="addOutAct" method="addOut">
+          <result></result>
+       </action>
+       <action name="updateOut" class="updateOutAct" method="updateOut">
+          <result></result>
+       </action>
+    
+    
+    </package>
+</struts>

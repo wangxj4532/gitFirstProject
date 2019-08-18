@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+  <bean id="CarDao" class="com.ydsn.tms.dao.imp.jcxx_CarStoreDAOImp" parent="baseDAO"></bean>
+  <bean id="CarDao1" class="com.ydsn.tms.dao.imp.jcxx_CargoSpaceImp" parent="baseDAO"></bean>
+  <bean id="CarSer" class="com.ydsn.tms.service.imp.jcxx_CarStoreServiceImp">
+     <property name="cardao" ref="CarDao"></property>
+     <property name="cardao1" ref="CarDao1"></property>
+  </bean>
+  <bean id="showCarAct" class="com.ydsn.tms.action.jcxx_CarStoreAction" scope="prototype">
+     <property name="carser" ref="CarSer"></property>
+  </bean>
+  <bean id="showNameByIdAct" class="com.ydsn.tms.action.jcxx_CarStoreAction" scope="prototype">
+     <property name="carser" ref="CarSer"></property>
+  </bean>
+  <bean id="addCarAct" class="com.ydsn.tms.action.jcxx_CarStoreAction" scope="prototype">
+     <property name="carser" ref="CarSer"></property>
+  </bean>
+  <bean id="updateCarAct" class="com.ydsn.tms.action.jcxx_CarStoreAction" scope="prototype">
+     <property name="carser" ref="CarSer"></property>
+  </bean>
+
+
+
+</beans>

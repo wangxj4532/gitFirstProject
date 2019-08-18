@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="chrkgl_rukudan" table="rukudan">
+		<id name="rk_bill" column="rk_bill"></id>
+		<property name="kf_id" column="kf_id"></property>
+		<property name="rk_date" column="rk_date"></property>
+		<property name="dj_date" column="dj_date"></property>
+		<property name="kh_id" column="kh_id"></property>
+		<property name="rkdd_id" column="rkdd_id"></property>
+		<property name="jy_man" column="jy_man"></property>
+		<property name="zhd_man" column="zhd_man"></property>
+		<property name="sh_driver" column="sh_driver"></property>
+		<property name="rkorfprk" column="rkorfprk"></property>
+		<property name="remark" column="remark"></property>
+	</class>
+</hibernate-mapping>

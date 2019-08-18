@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+  <bean id="RMXDao" class="com.ydsn.tms.dao.imp.chrkgl_rukudanminxiDAOImp" parent="baseDAO"></bean>
+  <bean id="RMX_COMDao" class="com.ydsn.tms.dao.imp.jcxx_ComFileDAOImp" parent="baseDAO"></bean>
+  <bean id="CMXSer" class="com.ydsn.tms.service.imp.chrkgl_rukudanminxiServiceImp">
+     <property name="rmxdao" ref="RMXDao"></property>
+     <property name="rmx_comdao" ref="RMX_COMDao"></property>
+  </bean>
+  <bean id="showRMXAct" class="com.ydsn.tms.action.chrkgl_rukudanminxiAction" scope="prototype">
+     <property name="rmxser" ref="RMXSer"></property>
+  </bean>
+  <bean id="deleteRMXAct" class="com.ydsn.tms.action.chrkgl_rukudanminxiAction" scope="prototype">
+     <property name="rmxser" ref="RMXSer"></property>
+  </bean>
+  <bean id="addRMXAct" class="com.ydsn.tms.action.chrkgl_rukudanminxiAction" scope="prototype">
+     <property name="rmxser" ref="RMXSer"></property>
+  </bean>
+  
+
+
+
+</beans>

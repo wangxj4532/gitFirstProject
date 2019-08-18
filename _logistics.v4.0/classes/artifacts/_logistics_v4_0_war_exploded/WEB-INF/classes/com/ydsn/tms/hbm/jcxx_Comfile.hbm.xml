@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="ComFile" table="comFile">
+		<id name="g_id" column="g_id"></id>
+		<property name="cus_num" column="cus_num"></property>
+		<property name="g_class" column="g_class"></property>
+		<property name="g_bill" column="g_bill"></property>
+		<property name="g_name" column="g_name"></property>
+		<property name="g_unit" column="g_unit"></property>
+		<property name="g_weight" column="g_weight"></property>
+		<property name="g_length" column="g_length"></property>
+		<property name="g_width" column="g_width"></property>
+		<property name="g_height" column="g_height"></property>
+		<property name="g_packamount" column="g_packamount"></property>
+		<property name="g_standard" column="g_standard"></property>
+		<property name="g_price" column="g_price"></property>
+		<property name="g_packunit" column="g_packunit"></property>
+		<property name="g_packweight" column="g_packweight"></property>
+		<property name="g_packlength" column="g_packlength"></property>
+		<property name="g_packwidth" column="g_packwidth"></property>
+		<property name="g_packheight" column="g_packheight"></property>
+		<property name="g_serial" column="g_serial"></property>
+		<property name="g_remarks" column="g_remarks"></property>
+		<property name="g_time" column="g_time"></property>
+		<property name="g_value" column="g_value"></property>
+	</class>
+</hibernate-mapping>

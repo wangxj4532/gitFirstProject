@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+<bean id="OutDao" class="com.ydsn.tms.dao.imp.ddgl_OutComCusDAOImp" parent="baseDAO">
+</bean>
+<bean id="OutDao1" class="com.ydsn.tms.dao.imp.ddgl_OutofwarehouseOrderDAOImp" parent="baseDAO">
+</bean>
+<bean id="ComDao3" class="com.ydsn.tms.dao.imp.jcxx_ComFileDAOImp" parent="baseDAO">
+</bean>
+<bean id="Cusdao3" class="com.ydsn.tms.dao.imp.jcxx_CustomerDAOImp" parent="baseDAO">
+</bean>
+<bean id="OutSer" class="com.ydsn.tms.service.imp.ddgl_OutComCusServiceImp">
+   <property name="outdao" ref="OutDao"></property>
+   <property name="outdao1" ref="OutDao1"></property>
+   <property name="comdao3" ref="ComDao3"></property>
+   <property name="cusdao3" ref="Cusdao3"></property>
+</bean>
+<bean id="showOutAct" class="com.ydsn.tms.action.ddgl_OutComCusAction" scope="prototype">
+   <property name="outser" ref="OutSer"></property>
+</bean>
+<bean id="findAllBillAct" class="com.ydsn.tms.action.ddgl_OutComCusAction" scope="prototype">
+   <property name="outser" ref="OutSer"></property>
+</bean>
+
+<bean id="CusDao" class="com.ydsn.tms.dao.imp.jcxx_CustomerDAOImp" parent="baseDAO">
+</bean>
+<bean id="CusSer" class="com.ydsn.tms.service.imp.jcxxCustomerServiceImp">
+   <property name="cusdao" ref="CusDao"></property>
+</bean>
+<bean id="showCusAct" class="com.ydsn.tms.action.jcxx_CustomerAction" scope="prototype">
+   <property name="cusser" ref="CusSer"></property>
+</bean>
+
+
+
+
+
+<bean id="addOutAct" class="com.ydsn.tms.action.ddgl_OutComCusAction" scope="prototype">
+   <property name="outser" ref="OutSer"></property>
+</bean>
+<bean id="updateOutAct" class="com.ydsn.tms.action.ddgl_OutComCusAction" scope="prototype">
+   <property name="outser" ref="OutSer"></property>
+</bean>
+
+</beans>

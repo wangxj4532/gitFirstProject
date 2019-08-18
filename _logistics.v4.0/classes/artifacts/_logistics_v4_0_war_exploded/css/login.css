@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+body {
+	margin: 0px;
+	padding: 0px;
+	background: url(../imgs/wuliu.jpg) no-repeat;
+}
+
+#fc {
+	width: 400px;
+	height: 325px;
+	position: absolute;
+	left: 500px;
+	top: 280px;
+}
+
+.lb {
+	color: purple;
+	font-size: 25px;
+	font-family: 华文行楷;
+}
+
+#user_pwd {
+	background: rgba(0, 118, 160, .25);
+	text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
+	border-radius: 20px;
+	height: 25px;
+	width: 150px;
+	color: aqua;
+}
+
+#yanzhengma {
+	background: rgba(0, 118, 160, .25);
+	text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
+	border-radius: 20px;
+	width:70px;
+	height: 25px;
+	color: aqua;
+}
+
+#user_name {
+	background: rgba(0, 118, 160, .25);
+	text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
+	border-radius: 10px;
+	height: 25px;
+	color: aqua;
+}
+
+#rukou {
+	padding-left: 80px;
+	margin: 0px;
+}
+
+#sbt{
+    background-color: transparent; 
+    border: 0; 
+    color: purple; 
+    font-size: 25px; 
+    font-family: 华文行楷;
+}
+
+#btn{
+    background-color: transparent; 
+    border: 0; 
+    color: purple; 
+    font-size: 25px; 
+    font-family: 华文行楷;
+}

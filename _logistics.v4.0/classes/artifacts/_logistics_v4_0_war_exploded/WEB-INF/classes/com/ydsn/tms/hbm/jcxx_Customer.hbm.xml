@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="Customer" table="customer">
+		<id name="cus_id" column="cus_id"></id>
+		<property name="cus_bill" column="cus_bill"></property>
+		<property name="cus_name" column="cus_name"></property>
+		<property name="cus_shortname" column="cus_shortname"></property>
+		<property name="cus_phone" column="cus_phone"></property>
+		<property name="cus_addr" column="cus_addr"></property>
+		<property name="cus_linkman" column="cus_linkman"></property>
+		<property name="cus_email" column="cus_email"></property>
+		<property name="cus_fax" column="cus_fax"></property>
+	</class>
+</hibernate-mapping>

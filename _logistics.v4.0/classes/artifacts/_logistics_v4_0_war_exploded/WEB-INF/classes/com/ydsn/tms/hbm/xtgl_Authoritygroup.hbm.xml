@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="xtgl_Authoritygroup" table="authorityGroup">
+		<id name="auth_id" column="auth_id"></id>
+		<property name="auth_name" column="auth_name"></property>
+		<property name="auth_level" column="auth_level"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="receiveFile" namespace="/jcxx" extends="struts-default">
+       <action name="addRec" class="addRecAct" method="addRec">
+          <result></result>
+       </action>
+       <action name="updateRec" class="updateRecAct" method="updateRec">
+          <result  type="redirectAction">show</result>
+       </action>
+       <action name="deleteRec" class="deleteRecAct" method="deleteRec">
+          <result  type="redirectAction">show</result>
+       </action>
+       <action name="showRec" class="showRecAct" method="showRec">
+          <result name="success"></result>
+       </action>
+       <action name="showRec_name" class="showRec_nameAct" method="showRec_name">
+          <result></result>
+       </action>
+    </package>
+</struts>

@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+#tm {
+	margin: 0px;
+	padding:0px;
+	width: 290px;
+	height: 120px;
+	float: right;
+	visibility: visible;
+	text-align: center;
+	font-family: serif;
+	font-size: 16pt;
+	color: #000000;
+}
+
+#touxiang {
+	width: 200px;
+	height: 130px;
+	background: url(../imgs/guanliyuan.png) no-repeat;
+	margin: 0px;
+}
+
+a[title] {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+}
+
+.a {
+	margin-bottom: -18px;
+	padding-left: 40px;
+	width: 144px;
+	height: 25px;
+	border-style: groove;
+	background: url(../imgs/1.jpg) no-repeat;
+}
+#exit{
+	padding-left: 120px;
+	color:blue;
+}
+
+#tt{
+	width: 1366px;
+    height: 250px; 
+    background: url(../imgs/wuliu.jpg) no-repeat;
+}
+#lab{
+	font-size:40pt;
+	top:85px;
+	left:20px;
+	color:green;
+	position:absolute;
+    font-family: 华文行楷;
+}
+#nav{
+	height: 160px; 
+	background: url(../imgs/nat.jpg);
+}

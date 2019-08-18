@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- 包 业务处理-->
+    <package name="rukudanminxi" namespace="/chrkgl" extends="struts-default">
+       <action name="showRMX" class="showRMXAct" method="showRMX">
+          <result></result>
+       </action>
+       <action name="addRMX" class="addRMXAct" method="addRMX">
+          <result  type="redirectAction">showCMX</result>
+       </action>
+       <action name="deleteRMX" class="deleteRMXAct" method="deleteRMX">
+          <result  type="redirectAction">showRMX</result>
+       </action>
+    </package>
+</struts>

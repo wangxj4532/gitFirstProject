@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ydsn.tms.po">
+	<class name="ddgl_outofwarehouseOrder" table="outofwarehouseOrder">
+		<id name="chkdd_bill" column="chkdd_bill"></id>
+		<property name="chkddshp_id" column="chkddshp_id"></property>
+		<property name="chkddkh_id" column="chkddkh_id"></property>
+		<property name="khchkdd_bill" column="khchkdd_bill"></property>
+		<property name="khdd_amount" column="khdd_amount"></property>
+		<property name="dd_date" column="dd_date"></property>
+		<property name="yjchk_date" column="yjchk_date"></property>
+		<property name="chkorccphx" column="chkorccphx"></property>
+		<property name="chkddzht_status" column="chkddzht_status"></property>
+		<property name="chkdd_man" column="chkdd_man"></property>
+		<property name="chkddzhd_time" column="chkddzhd_time"></property>
+	</class>
+</hibernate-mapping>

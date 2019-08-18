@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+<bean id="StoDao" class="com.ydsn.tms.dao.imp.StoreroomDAOImp" parent="baseDAO">
+</bean>
+<bean id="StoSer" class="com.ydsn.tms.service.imp.StoreroomServiceImp">
+   <property name="dao" ref="StoDao"></property>
+</bean>
+<bean id="showStoAct" class="com.ydsn.tms.action.StoreroomAction" scope="prototype">
+   <property name="ser" ref="StoSer"></property>
+</bean>
+<bean id="showNameAct" class="com.ydsn.tms.action.StoreroomAction" scope="prototype">
+   <property name="ser" ref="StoSer"></property>
+</bean>
+<bean id="deleteStoAct" class="com.ydsn.tms.action.StoreroomAction" scope="prototype">
+   <property name="ser" ref="StoSer"></property>
+</bean>
+<bean id="updateStoAct" class="com.ydsn.tms.action.StoreroomAction" scope="prototype">
+   <property name="ser" ref="StoSer"></property>
+</bean>
+<bean id="addStoAct" class="com.ydsn.tms.action.StoreroomAction" scope="prototype">
+   <property name="ser" ref="StoSer"></property>
+</bean>
+
+
+</beans>
