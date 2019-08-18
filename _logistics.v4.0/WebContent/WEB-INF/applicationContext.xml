@@ -61,4 +61,5 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 	<property name="sessionFactory" ref="sessionFactory"></property>
 </bean>
 </beans>
+
 </xml-body>
