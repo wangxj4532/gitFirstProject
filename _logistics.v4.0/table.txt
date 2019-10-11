@@ -1,0 +1,190 @@
+select * from userInfo;
+insert into userInfo(user_id,user_mch,user_name,user_pwd,stm_id)
+values('1100','1100','1100','1100','1100');
+user_id varchar(50),
+	user_mch varchar(50),
+	user_name varchar(50),
+	user_pwd varchar(50),
+	stm_id varchar(50)
+create table chukudan(
+	chk_id varchar(50),
+	chk_bill varchar(50),
+	chkkf_id varchar(50),
+	chk_date varchar(50),
+	chkkh_id varchar(50),
+	shhdw_id varchar(50),
+	chk_way varchar(50),
+	sh_way varchar(50),
+	sh_date varchar(50),
+	shh_man varchar(50)
+
+);
+
+create table chukudanminxi(
+	chkmx_bill varchar(50),
+	chkhw_num varchar(50),
+	chkmxchkd_id varchar(50),
+	chkhw varchar(50),
+	chkmxshp_id varchar(50),
+	chkmx_amount varchar(50),
+	chkyxq varchar(50),
+	chkshch_date varchar(50)
+
+);
+
+create table rukudan(
+	rk_bill varchar(50),
+	kf_id varchar(50),
+	rk_date varchar(50),
+	dj_date varchar(50),
+	kh_id varchar(50),
+	rkdd_id varchar(50),
+	jy_man varchar(50),
+	zhd_man varchar(50),
+	sh_driver varchar(50),
+	rkorfprk varchar(50),
+	remark varchar(50)
+);
+
+create table rukudanminxi(
+	rkmx_bill varchar(50),
+	rkhw_num varchar(50),
+	rkd_id varchar(50),
+	rkhw varchar(50),
+	shp_id varchar(50),
+	rkmx_amount varchar(50),
+	rkyxq varchar(50),
+	rkshch_date varchar(50)
+);
+
+create table enterwarehouseOrder(
+	rkdd_bill varchar(50),
+	rkddshp_id varchar(50),
+	rkddkh_id varchar(50),
+	khdd_bill varchar(50),
+	rk_amount varchar(50),
+	rkorfprk varchar(50),
+	rkdd_status varchar(50),
+	xd_date varchar(50),
+	
+	yjrk_date varchar(50),
+	rkddzhd_man varchar(50),
+	rkddzhd_time varchar(50)
+);
+
+create table outofwarehouseOrder(
+	chkdd_bill varchar(50),
+	chkddshp_id varchar(50),
+	chkddkh_id varchar(50),
+	khchkdd_bill varchar(50),
+	khdd_amount varchar(50),
+	dd_date varchar(50),
+	yjchk_date varchar(50),
+	chkorccphx varchar(50),
+	
+	chkddzht_status varchar(50),
+	chkdd_man varchar(50)
+);
+
+create table cargoSpace(
+	car_id varchar(50),
+	sto_id varchar(50),
+	car_bill varchar(50),
+	car_desc varchar(50),
+	car_desc varchar(50)
+);
+
+create table comFile(
+	g_id varchar(50),
+	cus_num varchar(50),
+	g_class varchar(50),
+	g_bill varchar(50),
+	g_name varchar(50),
+	g_unit varchar(50),
+	g_weight varchar(50),
+	g_length varchar(50),
+	g_width varchar(50),
+	g_height varchar(50),
+	g_packamount varchar(50),
+	g_standard varchar(50),
+	g_price varchar(50),
+	g_packunit varchar(50),
+	g_packweight varchar(50),
+	g_packlength varchar(50),
+	g_packwidth varchar(50),
+	g_packheight varchar(50),
+	g_serial varchar(50),
+	g_remarks varchar(50),
+	g_time varchar(50),
+	g_value varchar(50)
+);
+
+create table customer(
+	cus_id varchar(50),
+	cus_bill varchar(50),
+	cus_name varchar(50),
+	cus_shortname varchar(50),
+	cus_phone varchar(50),
+	cus_addr varchar(50),
+	cus_linkman varchar(50),
+	cus_email varchar(50),
+	cus_fax varchar(50)
+);
+
+create table receiveFile(
+	rec_id varchar(50),
+	rec_bill varchar(50),
+	rec_name varchar(50),
+	rec_man varchar(50),
+	rec_phone varchar(50),
+	rec_addr varchar(50),
+	rec_time varchar(50)
+);
+
+create table huowuyiku(
+	hwyk_bill varchar(50),
+	hwychk_bill varchar(50),
+	hwyrk_bill varchar(50),
+	hwykzhd_man varchar(50),
+	hwykzhd_time varchar(50),
+	hwyk_remark varchar(50)
+);
+
+create table huowuyiwei(
+	hwyw_bill varchar(50),
+	hwychhw_id varchar(50),
+	hwyrhw_id varchar(50),
+	hwywshp_id varchar(50),
+	hwywck_id varchar(50),
+	hwyw_num varchar(50),
+	
+	hwywbzhgg varchar(50),
+	hwyw_amount varchar(50),
+	hwyw_reason varchar(50)
+);
+
+create table authorityGroup(
+	auth_id varchar(50),
+	auth_name varchar(50),
+	auth_level varchar(50)
+);
+
+create table userInfo(
+	user_id varchar(50),
+	user_mch varchar(50),
+	user_name varchar(50),
+	user_pwd varchar(50),
+	stm_id varchar(50)
+);
+
+create table storeroom(
+	sto_id int,
+	sto_bill varchar(50),
+	sto_name varchar(50),
+	sto_phone varchar(50),
+	sto_addr varchar(50),
+	sto_man varchar(50)
+);
+
+select * from storeroom
+
